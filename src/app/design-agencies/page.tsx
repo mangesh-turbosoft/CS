@@ -1,6 +1,7 @@
+
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
 
 const challenges = [
   "Will the project be delivered to the quality we expect?",
@@ -43,12 +44,11 @@ export default function DesignAgencies() {
         <div className="min-h-[calc(100vh-70px)] flex flex-col justify-center relative">
           <h1
             data-aos="fade-up"
-            className="font-google-sans
-            text-[#f04c3e]
+            className="text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
-            mb-[30]
+            mb-[0]
            text-[48px] sm:text-[72px] md:text-[100px] lg:text-[150px] xl:text-[228px]
           "
           >
@@ -56,7 +56,7 @@ export default function DesignAgencies() {
           </h1>
           <p
             data-aos="fade-up"
-            className="font-google-sans
+            className="google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
@@ -100,15 +100,14 @@ leading-[1.2]
 
       <section id="next" className="min-h-screen flex flex-col xl:flex-row">
         <div className="w-full xl:w-1/2 bg-[#f04c3e] flex items-center">
-          <div className="max-w-[660px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] py-12 md:py-16 lg:py-[80px] w-full">
-            <div className="flex flex-col xl:flex-row gap-8 lg:gap-[60px]">
+          <div className="max-w-[800px] ml-auto px-4 sm:px-6 md:px-8 lg:px-[50px] py-12 md:py-16 lg:py-[80px] w-full">
+            <div className="flex flex-col xl:flex-row gap-8 lg:gap-[0px]">
               <div data-aos="fade-right" className="xl:w-1/2">
                 <h2
-                  className="text-white"
+                  className="text-white figtree pr-8"
                   style={{
                     fontSize: "clamp(28px,3vw,36px)",
                     lineHeight: "1.35",
-                    fontFamily: '"Google Sans Flex", sans-serif',
                     fontWeight: 400,
                   }}
                 >
@@ -126,13 +125,11 @@ leading-[1.2]
                     className="relative flex items-start mb-[50px]"
                   >
                     <div className="w-[26px] h-[26px] rounded-full border-[4px] border-[#ff8b80] bg-[#f04c3e] z-10 flex-shrink-0" />
-
                     <p
                       className="text-white ml-[20px]"
                       style={{
                         fontSize: "clamp(18px,2vw,24px)",
                         lineHeight: "1.25",
-                        fontFamily: '"Google Sans Flex", sans-serif',
                       }}
                     >
                       {item}
@@ -158,9 +155,9 @@ leading-[1.2]
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] w-full py-12 md:py-16 lg:py-[100px]">
           <h2
             data-aos="fade-up"
-            className="text-white font-semibold max-w-[1250px]"
+            className="text-white font-semibold"
             style={{
-              fontSize: "clamp(32px,4vw,64px)",
+              fontSize: "clamp(32px,4vw,54px)",
               lineHeight: "1.1",
               fontFamily: '"Google Sans Flex", sans-serif',
             }}
@@ -178,11 +175,10 @@ leading-[1.2]
                 <div className="w-[30px] h-[3px] bg-[#f04c3e] mb-[18px]" />
 
                 <p
-                  className="text-white"
+                  className="text-white figtree"
                   style={{
-                    fontSize: "clamp(18px,2vw,30px)",
-                    lineHeight: "1.6",
-                    fontFamily: '"Google Sans Flex", sans-serif',
+                    fontSize: "clamp(18px,2vw,28px)",
+                    lineHeight: "37px",
                   }}
                 >
                   {item}

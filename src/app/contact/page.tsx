@@ -42,20 +42,20 @@ export default function Contact() {
     <div className="w-full font-sans">
       <section className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] min-h-[100vh] flex flex-col justify-center bg-white">
         <h1
-          className="font-google-sans
-            text-[#f04c3e]
+          className="            text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
-            mb-[30]
+            mb-[0]
            text-[42px] sm:text-[60px] md:text-[80px] lg:text-[120px] xl:text-[228px]
           "
+          style={{ letterSpacing: "-0.036em" }}
         >
           Contact Us
         </h1>
 
         <p
-          className="font-google-sans
+          className="google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
@@ -70,9 +70,9 @@ leading-[1.2]
         </p>
 
         <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
-                <Link
-                  href="#next"
-                  className="
+          <Link
+            href="#next"
+            className="
           absolute
           bottom-[40px]
           left-1/2
@@ -98,35 +98,37 @@ leading-[1.2]
         <div className="flex flex-col lg:flex-row">
           {offices.map((office, i) => (
             <div key={i} className="flex-1 min-w-0">
-              <img
+              <Image
                 src={office.img}
                 alt={`${office.country} office`}
+                width={800}
+                height={600}
                 className="w-full object-cover mb-5"
                 style={{ height: "60%" }}
               />
-              <div className="px-5 sm:px-8 md:px-10 lg:px-[20%] py-6 lg:py-[10%]">
+              <div className="px-5 sm:px-8 md:px-10 lg:px-[20%] py-6 lg:py-[3%]">
                 <p
                   data-aos="fade-up"
-                  className="font-bold text-[#2a2a2a] mb-3"
+                  className="google-sans text-[#2a2a2a] mb-3"
                   style={{
                     color: "#f04c3e",
                     fontSize: "clamp(22px,3vw,40px)",
                     lineHeight: "1.2",
                     marginBottom: "5px",
+                    fontWeight: 600,
                   }}
                 >
                   {office.country}
                 </p>
 
-                {/* Address lines — ~14px gray */}
-                <address data-aos="fade-up" className="not-italic mb-3">
+                <address data-aos="fade-up" className="not-italic">
                   {office.address.split("\n").map((line, j) => (
                     <p
                       key={j}
                       className="text-[#666666] leading-relaxed"
                       style={{
                         fontSize: "clamp(16px,2vw,30px)",
-                        lineHeight: "1.6",
+                        lineHeight: "normal",
                         color: "#5c5c5c",
                       }}
                     >
@@ -144,12 +146,12 @@ leading-[1.2]
                   }}
                 >
                   <span className="text-[#666666]">{office.contactLabel} </span>
-                  <a
+                  <Link
                     href={office.contactHref}
                     className="text-[#f04c3e] hover:text-[#e8412a] transition-colors duration-200"
                   >
                     {office.contactValue}
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>

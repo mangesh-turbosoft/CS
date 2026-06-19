@@ -4,21 +4,18 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Firstsec() {
-  const handleScroll = (e: React.MouseEvent) => {
-    e.preventDefault();
-
-    document.getElementById("next")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="relative min-h-screen flex items-center bg-[#f2f2f2] pb-[100px]">
-      <div className="max-w-[1600px] mx-auto px-5 md:px-8 xl:px-[50px] w-full pt-[80px] md:pt-[100px]">
+    <section className="relative min-h-screen flex items-center bg-white">
+      <div className="max-w-[1600px] mx-auto px-5 md:px-8 xl:px-[50px] w-full pt-[0px]">
         <h1
           data-aos="fade-up"
-          className="text-[#f04c3e] font-semibold leading-none m-0 mb-[30px]"
+          className="google-sans text-[#f04c3e] m-0 mb-[20px]"
           style={{
-            fontSize: "clamp(46px, 14vw, 228px)",
-            fontFamily: "'Google Sans Flex', sans-serif",
+            fontSize: "clamp(46px, 13vw, 228px)",
+            lineHeight: 1.1,
+            fontWeight: 600,
+            marginBottom: "31px",
+            letterSpacing: "-0.04em",
           }}
         >
           Web <br />
@@ -27,39 +24,25 @@ export default function Firstsec() {
 
         <p
           data-aos="fade-up"
-          className="text-[#7b7b7b] font-medium mt-5"
+          className="google-sans text-[#7b7b7b] font-medium m-0"
           style={{
-            fontSize: "clamp(22px, 4vw, 62px)",
-            lineHeight: 1.15,
-            fontFamily: "'Google Sans Flex', sans-serif",
+            fontSize: "clamp(20px, 3.2vw, 62px)",
+            lineHeight: 1.2,
           }}
         >
           Premium websites in Headless, HubSpot and WordPress.
         </p>
       </div>
 
-      {/* Down Arrow */}
       <Link
         href="#next"
-        className="
-    absolute
-    bottom-[25px]
-    md:bottom-[40px]
-    left-1/2
-    -translate-x-1/2
-    w-[24px]
-    md:w-[30px]
-    h-[24px]
-    md:h-[30px]
-    z-[999]
-    animate-bounce
-  "
+        className="absolute bottom-[40px] left-1/2 -translate-x-1/2 w-[24px] md:w-[28px] h-[24px] md:h-[28px] z-[999] animate-bounce"
       >
         <Image
           src="/images/inner-down-arrow.png"
           alt="Scroll Down"
-          width={30}
-          height={30}
+          width={28}
+          height={28}
           className="w-full h-full object-contain"
         />
       </Link>

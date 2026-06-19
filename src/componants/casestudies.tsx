@@ -16,12 +16,12 @@ export default function CaseStudies() {
   };
 
   return (
-    <section className="w-full flex flex-col xl:flex-row">
+    <section className="w-full flex flex-col xl:flex-row" style={{ height: "100vh" }}>
       <div className="w-full xl:w-1/2 relative bg-black flex flex-col">
         <div className="relative flex-1 overflow-hidden">
           <video ref={videoRef} className="w-full h-full object-cover">
             <source
-              src="https://www.creativeskills.com/video/Rob-iflourish4.m4v"
+              src="/video/Rob-iflourish4.m4v"
               type="video/mp4"
             />
           </video>
@@ -49,7 +49,6 @@ export default function CaseStudies() {
           <p
             data-aos="fade-up"
             className="font-bold text-gray-500 text-[24px] sm:text-[28px] lg:text-[32px] leading-tight mb-2"
-            style={{ fontFamily: "'Figtree', sans-serif" }}
           >
             Real Stories, Real Impact – Hear from Our Clients
           </p>
@@ -58,8 +57,8 @@ export default function CaseStudies() {
             data-aos="fade-up"
             className="text-gray-500 text-[16px] sm:text-[20px] lg:text-[26px]"
             style={{
-              fontFamily: "'Figtree', sans-serif",
               lineHeight: "1.1",
+              paddingBottom: "40px",
             }}
           >
             Hear directly from our clients as they share their experiences and
@@ -71,16 +70,15 @@ export default function CaseStudies() {
       <div className="w-full xl:w-1/2 flex flex-col">
         <div className="flex flex-col xl:flex-row flex-1">
           <div className="w-full xl:w-1/2 bg-white flex items-center px-5 sm:px-6 lg:px-[35px] py-6 md:py-[16px]">
-            <div data-aos="fade-down">
+            <div>
               <span
                 className="block font-bold text-[#f04c3e] text-[24px] sm:text-[28px] lg:text-[32px] leading-tight"
-                style={{ fontFamily: "'Figtree', sans-serif" }}
               >
                 White-label Development
               </span>
               <p
-                className="text-[#7b7b7b] text-[15px] lg:text-[16px] leading-relaxed mt-4"
-                style={{ fontFamily: "'Figtree', sans-serif" }}
+                className="text-[#7b7b7b] text-[22px] lg:text-[26px] leading-relaxed mt-[4px]"
+                style={{ lineHeight: "1.2" }}
               >
                 Design agencies often face challenges scaling development
                 capacity while maintaining quality and timelines. Our
@@ -103,8 +101,7 @@ export default function CaseStudies() {
             >
               <h2
                 data-aos="zoom-in"
-                className="text-white text-center font-bold text-[32px] sm:text-[40px] lg:text-[48px] leading-tight"
-                style={{ fontFamily: "'Figtree', sans-serif" }}
+                className="figtree text-white text-center font-bold text-[32px] sm:text-[40px] lg:text-[48px] leading-tight"
               >
                 The Process
               </h2>
@@ -120,8 +117,7 @@ export default function CaseStudies() {
             >
               <h2
                 data-aos="zoom-in"
-                className="text-white text-center font-bold text-[32px] sm:text-[40px] lg:text-[48px] leading-tight"
-                style={{ fontFamily: "'Figtree', sans-serif" }}
+                className="figtree text-white text-center font-bold text-[32px] sm:text-[40px] lg:text-[48px] leading-tight"
               >
                 Our Services
               </h2>
@@ -137,9 +133,8 @@ export default function CaseStudies() {
               href="/design-agencies/"
               className="absolute inset-0 z-10 flex items-center justify-center no-underline"
             >
-              <h2
-                className="text-white text-center font-bold text-[32px] sm:text-[40px] lg:text-[48px] leading-tight"
-                style={{ fontFamily: "'Figtree', sans-serif" }}
+              <h2  data-aos="zoom-in"
+                className="figtree text-white text-center font-bold text-[32px] sm:text-[40px] lg:text-[48px] leading-tight"
               >
                 Design Agencies
               </h2>

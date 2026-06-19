@@ -82,16 +82,16 @@ const steps = [
 
 export default function Process() {
   return (
-    <div className="w-full font-sans">
+    <div className="w-full">
       <section className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] min-h-[80vh] lg:min-h-screen flex flex-col justify-center bg-white">
         <h1
           data-aos="fade-up"
-          className="font-google-sans
+          className="
             text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
-            mb-[30]
+            mb-[0]
            text-[48px] sm:text-[72px] md:text-[100px] lg:text-[150px] xl:text-[228px]
           "
         >
@@ -100,7 +100,7 @@ export default function Process() {
 
         <p
           data-aos="fade-up"
-          className="font-google-sans
+          className="google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
@@ -155,10 +155,12 @@ leading-[1.2]
             } items-center`}
           >
             <div className="w-full xl:w-[50%] flex items-center justify-center py-10 md:py-16 px-4 sm:px-6 md:px-8 xl:px-[5vw]">
-              <img
+              <Image
                 data-aos="zoom-in"
                 src={step.img}
                 alt={step.title}
+                width={800}
+                height={600}
                 className="w-full max-w-[720px] h-auto object-contain select-none"
                 draggable={false}
               />
@@ -169,7 +171,7 @@ leading-[1.2]
               className="w-full xl:w-[50%] px-4 sm:px-6 md:px-8 xl:px-[6vw] py-10 md:py-16 xl:py-0"
             >
               <h2
-                className="font-bold text-[#e8412a] leading-[1.2] mb-6"
+                className="font-semibold text-[#e8412a] leading-[1] mb-6"
                 style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
               >
                 {step.title}
@@ -179,10 +181,9 @@ leading-[1.2]
                 {step.body.map((para, j) => (
                   <p
                     key={j}
-                    className="text-[#000] leading-[1.65]"
+                    className="text-[#000] leading-[1.4]"
                     style={{
                       fontSize: "clamp(16px, 2vw, 26px)",
-                      lineHeight: "1.6",
                     }}
                   >
                     {para}
@@ -194,19 +195,19 @@ leading-[1.2]
         </section>
       ))}
 
-      <section className="py-12 md:py-24 px-4 sm:px-6 flex justify-center border-t border-[#ebebeb] bg-white">
+      <section className="py-12 md:py-10 px-4 sm:px-6 flex justify-center border-t border-[#ebebeb] bg-white">
         <p
           data-aos="fade-up"
           className="text-[#5a5a5a]"
           style={{ fontSize: "clamp(15px, 1.2vw, 18px)" }}
         >
           Would you like to know more?{" "}
-          <a
+          <Link             
             href="mailto:hello@creativeskills.com"
             className="font-semibold text-[#1a1a1a] underline hover:text-[#e8412a] transition-colors duration-200"
           >
             Click here
-          </a>{" "}
+          </Link>{" "}
           to send an email.
         </p>
       </section>

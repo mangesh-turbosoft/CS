@@ -27,25 +27,27 @@ export const metadata: Metadata = {
 
 export default function Services() {
   return (
-    <div className="pt-[70px] lg:pt-[0px]">
+    <>
       <section className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] min-h-[80vh] lg:min-h-screen flex flex-col justify-center bg-white">
         <h1
           data-aos="fade-up"
-          className="font-google-sans
-            text-[#f04c3e]
+          className="text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
-            mb-[30]
-           text-[48px] sm:text-[72px] md:text-[100px] lg:text-[150px] xl:text-[228px]
+            mb-[0]
+           text-[48px] sm:text-[72px] md:text-[100px] lg:text-[150px] xl:text-[228px]           
           "
+          style={{
+            letterSpacing: "-0.01em",
+          }}
         >
           Development Partner
         </h1>
 
         <p
           data-aos="fade-up"
-          className="font-google-sans
+          className="google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
@@ -116,8 +118,7 @@ leading-[1.2]
               className="text-white mb-10"
               style={{
                 fontSize: "clamp(18px,2.2vw,30px)",
-                lineHeight: "1.5",
-                fontFamily: '"Google Sans Flex", sans-serif',
+                lineHeight: "normal",
               }}
             >
               We specialise in premium WordPress development for design
@@ -130,8 +131,7 @@ leading-[1.2]
               className="text-white mb-10"
               style={{
                 fontSize: "clamp(18px,2.2vw,30px)",
-                lineHeight: "1.5",
-                fontFamily: '"Google Sans Flex", sans-serif',
+                lineHeight: "normal",
               }}
             >
               We take pride in our work and do not use page builders or
@@ -139,7 +139,7 @@ leading-[1.2]
               creation.
             </p>
 
-            <a
+            <Link
               href="mailto:hello@creativeskills.com"
               className="text-white"
               style={{
@@ -150,18 +150,20 @@ leading-[1.2]
             >
               <span className="text-[#f04c3e] font-semibold">Click here</span>{" "}
               to receive examples of our work.
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
       <section className="min-h-screen flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 bg-[#f04c3e] text-white">
-          <div className="max-w-[720px] mx-auto px-6 sm:px-8 md:px-10 lg:px-[80px] py-12 md:py-16 lg:py-[100px]">
-            <img
+          <div className="max-w-[730px] mx-auto px-6 sm:px-8 md:px-10 lg:px-[0px] py-12 md:py-16 lg:py-[100px]">
+            <Image
               data-aos="zoom-in"
               src="/images/software-icon.png"
               alt=""
+              width={120}
+              height={100}
               className="w-[70px] sm:w-[90px] lg:w-[120px] mb-8 lg:mb-12"
             />
 
@@ -183,21 +185,22 @@ leading-[1.2]
               className="mb-10"
               style={{
                 fontSize: "clamp(18px,2vw,30px)",
-                lineHeight: "1.6",
-                fontFamily: '"Google Sans Flex", sans-serif',
+                lineHeight: "normal",
               }}
             >
               Experience the flexibility and power of modern web architectures
               through our headless CMS development services using platforms like
-              <strong> Strapi, Contentful, or Sanity.</strong>
+              <strong> Strapi, Contentful, or Sanity.</strong> We assist you in
+              selecting the best headless CMS platform that meets your specific
+              requirements and provide training for your team to effectively
+              manage content within the system.
             </p>
 
             <p
               data-aos="fade-up"
               style={{
                 fontSize: "clamp(18px,2vw,30px)",
-                lineHeight: "1.6",
-                fontFamily: '"Google Sans Flex", sans-serif',
+                lineHeight: "normal",
               }}
             >
               Whether you are looking to migrate your content, optimise your
@@ -209,10 +212,12 @@ leading-[1.2]
         </div>
 
         <div className="w-full lg:w-1/2 bg-[#8c8c8c] text-white">
-          <div className="max-w-[720px] mx-auto px-6 sm:px-8 md:px-10 lg:px-[80px] py-12 md:py-16 lg:py-[100px]">
-            <img
+          <div className="max-w-[730px] mx-auto px-6 sm:px-8 md:px-10 lg:px-[0px] py-12 md:py-16 lg:py-[100px]">
+            <Image
               data-aos="zoom-in"
               src="/images/web-icon.png"
+              width={120}
+              height={100}
               alt=""
               className="w-[70px] sm:w-[90px] lg:w-[120px] mb-8 lg:mb-12"
             />
@@ -221,7 +226,7 @@ leading-[1.2]
               data-aos="fade-up"
               className="mb-10"
               style={{
-                fontSize: "clamp(38px,5vw,72px)",
+                fontSize: "clamp(38px,5vw,70px)",
                 lineHeight: "1.1",
                 fontWeight: 600,
                 fontFamily: '"Google Sans Flex", sans-serif',
@@ -235,28 +240,32 @@ leading-[1.2]
               className="mb-10"
               style={{
                 fontSize: "clamp(18px,2vw,30px)",
-                lineHeight: "1.6",
-                fontFamily: '"Google Sans Flex", sans-serif',
+                lineHeight: "normal",
               }}
             >
               We provide expert HubSpot development services to help businesses
-              enhance marketing, sales, and customer service.
+              enhance marketing, sales, and customer service. Our team builds
+              custom HubSpot themes, modules, and integrations tailored to your
+              brand. From HubSpot CMS websites to CRM automation and API
+              integrations, we deliver seamless, scalable solutions to
+              streamline workflows and boost engagement.
             </p>
 
             <p
               data-aos="fade-up"
               style={{
                 fontSize: "clamp(18px,2vw,30px)",
-                lineHeight: "1.6",
-                fontFamily: '"Google Sans Flex", sans-serif',
+                lineHeight: "normal",
               }}
             >
               With deep expertise in HubSpot, we help businesses maximise lead
-              generation and personalise customer journeys.
+              generation and personalise customer journeys. Whether you're a
+              startup or an enterprise, we tailor our approach to drive
+              conversions and efficiency.
             </p>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }
