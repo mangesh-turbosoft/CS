@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "agile web development",
     "digital project process",
   ],
+   alternates: {
+    canonical: "https://www.creativeskills.com/process/",
+  },
 };
 
 const steps = [
@@ -75,15 +78,97 @@ const steps = [
     body: [
       "Our dedicated and knowledgeable support team is consistently available to offer prompt assistance, irrespective of the scale of the problem or the nature of the issue that requires resolution.",
       "We include 30 days of free bug resolution and technical support following the project's go-live.",
+      'Would you like to know more? <a href="mailto:support@yourdomain.com" class="text-red-500 font-semibold">Click here</a> to send an email.',
     ],
     imgLeft: true,
   },
 ];
 
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.creativeskills.com/#organization",
+      "name": "Creative Skills",
+      "url": "https://www.creativeskills.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.creativeskills.com/images/cslogo.svg"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+44-7824-323288",
+        "contactType": "customer service"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.creativeskills.com/#website",
+      "url": "https://www.creativeskills.com",
+      "name": "Creative Skills",
+      "publisher": {
+        "@id": "https://www.creativeskills.com/#organization"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://www.creativeskills.com/process/#webpage",
+      "url": "https://www.creativeskills.com/process/",
+      "name": "Website Development Process | From Strategy to Launch | Creative Skills",
+      "description": "Discover our proven website development process covering planning, design collaboration, development, testing, launch and ongoing support.",
+      "isPartOf": {
+        "@id": "https://www.creativeskills.com/#website"
+      },
+      "about": {
+        "@id": "https://www.creativeskills.com/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.creativeskills.com/process/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.creativeskills.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Process",
+          "item": "https://www.creativeskills.com/process/"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://www.creativeskills.com/process/#process",
+      "name": "Creative Skills Project Delivery Process",
+      "itemListElement": steps.map((step, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "name": step.title,
+        "description": step.body[0]
+      }))
+    }
+  ]
+};
+
+
+
 export default function Process() {
   return (
+<>
+    <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(schema),
+        }}
+      />
     <div className="w-full">
-      <section className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] min-h-[80vh] lg:min-h-screen flex flex-col justify-center bg-white">
+      <section className="relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px]  desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
         <h1
           data-aos="fade-up"
           className="
@@ -104,7 +189,6 @@ export default function Process() {
             text-[#7b7b7b]
             font-medium
             max-w-full
-            overflow-hidden
             clear-both
             mt-8
            text-[24px] sm:text-[34px] md:text-[42px] lg:text-[52px] xl:text-[62px]
@@ -115,22 +199,20 @@ leading-[1.2]
           technical discipline, and a strong focus on delivery.
         </p>
 
-        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 text-[#e8412a]">
+        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
           <Link
             href="#next"
             className="
-  absolute
-  bottom-[20px]
-  md:bottom-[40px]
-  left-1/2
-  -translate-x-1/2
-  w-[24px]
-  h-[24px]
-  md:w-[30px]
-  md:h-[30px]
-  z-[999]
-  animate-bounce
-"
+            hidden desktop:block
+            absolute
+            bottom-[0px]
+            left-1/2
+            -translate-x-1/2
+            w-[30px]
+            h-[30px]
+            z-[999]
+            animate-bounce
+          "
           >
             <Image
               src="/images/inner-down-arrow.png"
@@ -147,28 +229,28 @@ leading-[1.2]
         <section
           id="next"
           key={i}
-          className="relative min-h-screen flex items-center border-t border-[#ebebeb] bg-white"
+          className="relative flex items-center border-t border-[#ebebeb] bg-white py-[20px] desktop:min-h-screen desktop:py-0"
         >
           <div
             className={`w-full flex flex-col ${
-              step.imgLeft ? "xl:flex-row" : "xl:flex-row-reverse"
+              step.imgLeft ? "md:flex-row" : "md:flex-row-reverse"
             } items-center`}
           >
-            <div className="w-full xl:w-[50%] flex items-center justify-center py-10 md:py-16 px-4 sm:px-6 md:px-8 xl:px-[5vw]">
+            <div className="w-full md:w-[50%] flex items-center justify-center py-10 md:py-16 px-4 sm:px-6 md:px-8 md:px-[5vw]">
               <Image
                 data-aos="zoom-in"
                 src={step.img}
                 alt={step.title}
                 width={800}
                 height={600}
-                className="w-full max-w-[720px] h-auto object-contain select-none"
+                className="w-[75%] md:w-full md:max-w-[720px] h-auto object-contain select-none"
                 draggable={false}
               />
             </div>
 
             <div
               data-aos="fade-up"
-              className="w-full xl:w-[50%] px-4 sm:px-6 md:px-8 xl:px-[6vw] py-10 md:py-16 xl:py-0"
+              className="w-full md:w-[50%] px-4 sm:px-6 md:px-8 xl:px-[6vw] py-10 pt-0 md:pt-10 md:py-16 xl:py-0"
             >
               <h2
                 className="font-semibold text-[#e8412a] leading-[1] mb-6"
@@ -185,32 +267,15 @@ leading-[1.2]
                     style={{
                       fontSize: "clamp(16px, 2vw, 26px)",
                     }}
-                  >
-                    {para}
-                  </p>
+                    dangerouslySetInnerHTML={{ __html: para }}
+                  />
                 ))}
               </div>
             </div>
           </div>
         </section>
       ))}
-
-      <section className="py-12 md:py-10 px-4 sm:px-6 flex justify-center border-t border-[#ebebeb] bg-white">
-        <p
-          data-aos="fade-up"
-          className="text-[#5a5a5a]"
-          style={{ fontSize: "clamp(15px, 1.2vw, 18px)" }}
-        >
-          Would you like to know more?{" "}
-          <Link             
-            href="mailto:hello@creativeskills.com"
-            className="font-semibold text-[#1a1a1a] underline hover:text-[#e8412a] transition-colors duration-200"
-          >
-            Click here
-          </Link>{" "}
-          to send an email.
-        </p>
-      </section>
     </div>
+    </>
   );
 }

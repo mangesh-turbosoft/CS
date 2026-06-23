@@ -1,27 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 export default function Intro() {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
+
   return (
     <>
       <section id="next">
-        <div className="w-full">
+        <div className="w-full">          
+          <Image
+            src="/images/cskills-map-tablet-new.png"
+            alt="Creative Skills World Map"
+            width={768}
+            height={400}
+            className="w-full h-auto block xl:hidden"
+            priority
+          />
+          
           <Image
             src="/images/cskills-map-new.png"
             alt="Creative Skills World Map"
             width={1920}
             height={500}
-            className="w-full h-auto block"
+            className="w-full h-auto hidden xl:block"
             priority
           />
         </div>
 
         <div
-          className="relative w-full bg-cover bg-center bg-no-repeat h-[220px] sm:h-[280px] md:h-[350px] lg:h-[476px]"
+          className="relative w-full bg-cover bg-center bg-no-repeat h-[70vw] md:h-[350px] lg:h-[476px]"
           style={{ backgroundImage: "url('/images/video-cover.png')" }}
         >
           <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 allign-middle h-full flex">
@@ -30,6 +50,7 @@ export default function Intro() {
               onClick={() => setIsOpen(true)}
               className="
       absolute top-1/2 !-translate-y-1/2
+       max-md:top-auto max-md:bottom-14 max-md:!translate-y-0
       left-4 sm:left-6 md:left-10 lg:left-[50px]
 
       bg-[#f04c3e]
@@ -101,6 +122,7 @@ export default function Intro() {
             </video>
           </div>
         </div>
+        
       )}
     </>
   );

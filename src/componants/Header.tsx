@@ -66,7 +66,7 @@ export default function Header() {
             >
               <Image
                 src="/images/dba.svg"
-                width={143} // 155 → 130
+                width={143} 
                 height={39}
                 alt="DBA Association Member"
               />
