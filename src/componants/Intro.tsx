@@ -20,7 +20,7 @@ export default function Intro() {
   return (
     <>
       <section id="next">
-        <div className="w-full">          
+        <div className="w-full fade">          
           <Image
             src="/images/cskills-map-tablet-new.png"
             alt="Creative Skills World Map"
@@ -46,9 +46,8 @@ export default function Intro() {
         >
           <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 allign-middle h-full flex">
             <button
-              data-aos="fade-left"
               onClick={() => setIsOpen(true)}
-              className="
+              className="reveal-up
       absolute top-1/2 !-translate-y-1/2
        max-md:top-auto max-md:bottom-14 max-md:!translate-y-0
       left-4 sm:left-6 md:left-10 lg:left-[50px]

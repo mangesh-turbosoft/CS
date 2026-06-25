@@ -2,13 +2,19 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ScrollArrow from "./ScrollArrow";
+
+const scrollToNext = () => {
+  document
+    .getElementById("intro")
+    ?.scrollIntoView({ behavior: "smooth" });
+};
 
 export default function Firstsec() {
   return (
     <>
     <section className="relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-80px">
       <h1
-        data-aos="fade-up"
         className="google-sans text-[#f04c3e] m-0 mb-[20px]"
         style={{
           fontSize: "clamp(46px, 13vw, 228px)",
@@ -23,7 +29,6 @@ export default function Firstsec() {
       </h1>
 
       <p
-        data-aos="fade-up"
         className="google-sans text-[#7b7b7b] font-medium m-0"
         style={{
           fontSize: "clamp(20px, 3.2vw, 62px)",
@@ -32,33 +37,12 @@ export default function Firstsec() {
       >
         Premium websites in Headless, HubSpot and WordPress.
       </p>
-      <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
-          <Link
-            href="#next"
-            className="
-            hidden desktop:block
-            absolute
-            bottom-[0px]
-            left-1/2
-            -translate-x-1/2
-            w-[30px]
-            h-[30px]
-            z-[999]
-            animate-bounce
-          "
-          >
-            <Image
-              src="/images/inner-down-arrow.png"
-              alt="Scroll Down"
-              width={30}
-              height={30}
-              className="w-full h-full object-contain"
-            />
-          </Link>
-        </div>
+       <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
+                  <ScrollArrow/>
+                </div>
         
     </section>
-    <div className="dbaLogoSec sm:hidden" style={{  
+    <div className="fade dbaLogoSec sm:hidden" style={{  
   padding: '22px 20px',
   background: '#F7F7F7'}}>
 			<Link href="https://www.dba.org.uk/" target="_blank">

@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import AOS from "aos";
 import Loader from "./Loader";
 
 export default function ClientLayout({
@@ -20,17 +19,9 @@ export default function ClientLayout({
       const timer = setTimeout(() => {
         setLoading(false);
         sessionStorage.setItem("loaderShown", "true");
-
-        setTimeout(() => {
-          AOS.refreshHard();
-        }, 200);
       }, 1800);
 
       return () => clearTimeout(timer);
-    } else {
-      setTimeout(() => {
-        AOS.refreshHard();
-      }, 100);
     }
   }, []);
 

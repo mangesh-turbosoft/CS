@@ -20,31 +20,38 @@ function normalizePath(path: string) {
 export default function Header() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+const [isVisible, setIsVisible] = useState(true);
+const [lastScrollY, setLastScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+useEffect(() => {
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
 
-      setLastScrollY(currentScrollY);
-    };
+    setLastScrollY(currentScrollY);
+  };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  window.addEventListener("scroll", handleScroll);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+  };
+}, [lastScrollY]);
 
   return (
     <>
       <header
         className="w-full fixed inset-x-0 top-0 z-50 bg-white border-b border-gray-200 transition-transform duration-300 ease-in-out"
-        style={{ transform: isVisible ? "translateY(0)" : "translateY(-100%)" }}
+        style={{
+        transform: isVisible
+          ? "translateY(0)"
+          : "translateY(-100%)"
+      }}
       >
         <div className="max-w-[1600px] mx-auto px-5 md:px-8 xl:px-[50px] flex items-center justify-between h-[68px]">
           <Link href="/">

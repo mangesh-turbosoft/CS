@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Script from "next/script";
+import Footer from "@/componants/Footer";
+import ScrollArrow from "@/componants/ScrollArrow";
+import ServicesAnimation from "@/componants/ServicesAnimation";
+import FullPageScroll from "@/componants/FullPageScroll";
+import { contactData } from "@/componants/meta";
+import { contactSchema } from "@/componants/schema";
 
 const offices = [
   {
@@ -22,120 +28,24 @@ const offices = [
   },
 ];
 
-
-export const metadata: Metadata = {
-  title: "Contact Us | Creative Skills Digital",
-  description:
-    "Get in touch with Creative Skills. Offices in London, UK and Pune, India. Call, email or visit us to discuss your next project.",
-  keywords: [
-    "contact creative skills",
-    "web development agency contact",
-    "london web agency",
-    "pune web development",
-    "hire web developer uk",
-  ],
-  alternates: {
-    canonical: "https://www.creativeskills.com/contact/",
-  },
-  openGraph: {
-    title: "Contact Us | Creative Skills Digital",
-    description:
-      "Get in touch with Creative Skills. Offices in London, UK and Pune, India.",
-    url: "https://www.creativeskills.com/contact/",
-    images: [
-      {
-        url: "https://www.creativeskills.com/images/creative-skills-share.png",
-      },
-    ],
-  },
-};
-
-const schema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.creativeskills.com/#organization",
-      name: "Creative Skills",
-      url: "https://www.creativeskills.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.creativeskills.com/images/cslogo.svg",
-      },
-      email: "hello@creativeskills.com",
-      telephone: "+44-7824-323288",
-      address: [
-        {
-          "@type": "PostalAddress",
-          streetAddress: "124 City Road",
-          addressLocality: "London",
-          postalCode: "EC1V 2NX",
-          addressCountry: "GB",
-        },
-        {
-          "@type": "PostalAddress",
-          streetAddress: "Third Floor, Clover Metropole, NIBM Undri Road",
-          addressLocality: "Pune",
-          postalCode: "411048",
-          addressCountry: "IN",
-        },
-      ],
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.creativeskills.com/contact/#webpage",
-      url: "https://www.creativeskills.com/contact/",
-      name: "Contact Us | Creative Skills Digital",
-      description:
-        "Get in touch with Creative Skills. Offices in London, UK and Pune, India.",
-      isPartOf: {
-        "@id": "https://www.creativeskills.com/#website",
-      },
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.creativeskills.com/contact/#breadcrumb",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: "https://www.creativeskills.com/",
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Contact",
-          item: "https://www.creativeskills.com/contact/",
-        },
-      ],
-    },
-    {
-      "@type": "ContactPage",
-      "@id": "https://www.creativeskills.com/contact/#contactpage",
-      url: "https://www.creativeskills.com/contact/",
-      name: "Contact Creative Skills",
-      description:
-        "Contact us via phone, email or visit our offices in London or Pune.",
-    },
-  ],
-};
-
+export const metadata: Metadata = contactData;
 
 
 export default function Contact() {
   return (
     <> 
+    <FullPageScroll />
+    <ServicesAnimation />
    <Script
   id="contact-schema"
   type="application/ld+json"
   strategy="beforeInteractive"
-  dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+  dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
 />
     <div className="w-full font-sans">
-      <section className="relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
-        <h1 data-aos="fade-up"
-          className="text-[#f04c3e]
+      <section className="panel reveal-section min-h-screen relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
+        <h1
+          className="fade text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
@@ -147,8 +57,8 @@ export default function Contact() {
           Contact Us
         </h1>
 
-        <p data-aos="fade-up"
-          className="google-sans
+        <p
+          className="fade google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
@@ -161,33 +71,12 @@ export default function Contact() {
           Get in touch to discuss your project or explore working together.
         </p>
 
-        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
-          <Link
-            href="#next"
-            className="
-hidden desktop:block
-          absolute
-          bottom-[0px]
-          left-1/2
-          -translate-x-1/2
-          w-[30px]
-          h-[30px]
-          z-[999]
-          animate-bounce
-        "
-          >
-            <Image
-              src="/images/inner-down-arrow.png"
-              alt="Scroll Down"
-              width={30}
-              height={30}
-              className="w-full h-full object-contain"
-            />
-          </Link>
-        </div>
+      <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
+        <ScrollArrow />
+      </div>
       </section>
 
-      <section id="next" className="w-full bg-white border-t border-[#ebebeb]">
+      <section id="next" className="panel reveal-section min-h-screen w-full bg-white border-t border-[#ebebeb]">
         <div className="flex flex-col md:flex-row">
           {offices.map((office, i) => (
             <div key={i} className="flex-1 min-w-0 w-full md:w-1/2">
@@ -196,12 +85,11 @@ hidden desktop:block
                 alt={`${office.country} office`}
                 width={800}
                 height={600}
-                className="w-full object-cover mb-5 max-sm:mb-0"
+                className="fade w-full object-cover mb-5 max-sm:mb-0"
                 style={{ height: "60%" }}
               />
-              <div className="px-5 sm:px-8 sm:pt-2 sm:pb-10 md:px-10 lg:px-[20%] py-6 lg:py-[3%]">
+              <div className="reveal-up px-5 sm:px-8 sm:pt-2 sm:pb-10 md:px-10 lg:px-[20%] py-6 lg:py-[3%]">
                 <p
-                  data-aos="fade-up"
                   className="google-sans text-[#2a2a2a] mb-3"
                   style={{
                     color: "#f04c3e",
@@ -214,7 +102,7 @@ hidden desktop:block
                   {office.country}
                 </p>
 
-                <address data-aos="fade-up" className="not-italic">
+                <address className="not-italic">
                   {office.address.split("\n").map((line, j) => (
                     <p
                       key={j}
@@ -231,7 +119,6 @@ hidden desktop:block
                 </address>
 
                 <p
-                  data-aos="fade-up"
                   style={{
                     fontSize: "clamp(16px,2vw,30px)",
                     lineHeight: "1.6",
@@ -251,6 +138,9 @@ hidden desktop:block
           ))}
         </div>
       </section>
+       <section className="panel">
+               <Footer/>
+             </section>
     </div>
     </>
   );
