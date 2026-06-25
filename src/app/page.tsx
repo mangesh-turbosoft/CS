@@ -12,17 +12,9 @@ export default function Home() {
     <>
       <FullPageScroll />
       <ServicesAnimation />
-  <section className="panel min-h-screen">
-    <Firstsec />
-  </section>
-
-  <section className="panel min-h-screen">
-    <Intro />
-  </section>
-
-  <section className="panel min-h-screen">
+      <Firstsec />
+      <Intro />
     <CaseStudies />
-  </section>
 
   <section className="panel">
     <Footer />

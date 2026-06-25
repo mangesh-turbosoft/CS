@@ -79,7 +79,7 @@ export default function Process() {
         }}
       />
       <div className="w-full">
-        <section className="panel reveal-section min-h-screen relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
+        <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
           <h1
             className="
             text-[#f04c3e]
@@ -117,7 +117,7 @@ leading-[1.2]
           <section
             id="next"
             key={i}
-            className="panel reveal-section min-h-screen relative flex items-center border-t border-[#ebebeb] bg-white py-[20px] desktop:min-h-screen desktop:py-0"
+            className="panel reveal-section relative flex items-center border-t border-[#ebebeb] bg-white py-[20px] desktop:min-h-screen desktop:py-0"
           >
             <div
               className={`w-full flex flex-col ${

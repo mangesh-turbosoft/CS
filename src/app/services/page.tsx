@@ -24,7 +24,7 @@ export default function Services() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <section className="panel reveal-section min-h-screen relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-80px">
+      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-80px">
        <h1
   className="text-[#f04c3e]
     font-semibold
@@ -59,7 +59,7 @@ export default function Services() {
 
       <section
         id="next"
-        className="panel reveal-section min-h-screen relative pt-[80px] pb-[80px] desktop:pt-[120px] desktop:pb-[120px] flex items-center overflow-hidden"
+        className="panel reveal-section desktop:min-h-screen relative pt-[80px] pb-[80px] desktop:pt-[120px] desktop:pb-[120px] flex items-center overflow-hidden"
         style={{
           backgroundImage: "url('/images/apps-bg-new-1.jpg')",
           backgroundSize: "cover",
@@ -123,7 +123,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="panel reveal-section min-h-screen flex flex-col lg:flex-row">
+      <section className="panel reveal-section desktop:min-h-screen flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 bg-[#f04c3e] text-white">
           <div className="reveal-up max-w-[1000px] mx-auto px-6 sm:px-8 md:px-10 lg:px-[30px] xl:px-[80px] py-12 md:py-16 lg:py-[100px]">
             <Image

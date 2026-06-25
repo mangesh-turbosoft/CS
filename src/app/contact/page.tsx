@@ -43,7 +43,7 @@ export default function Contact() {
   dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
 />
     <div className="w-full font-sans">
-      <section className="panel reveal-section min-h-screen relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
+      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
         <h1
           className="text-[#f04c3e]
             font-semibold
@@ -76,7 +76,7 @@ export default function Contact() {
       </div>
       </section>
 
-      <section id="next" className="panel reveal-section min-h-screen w-full bg-white border-t border-[#ebebeb]">
+      <section id="next" className="panel reveal-section desktop:min-h-screen w-full bg-white border-t border-[#ebebeb]">
         <div className="flex flex-col md:flex-row">
           {offices.map((office, i) => (
             <div key={i} className="flex-1 min-w-0 w-full md:w-1/2">

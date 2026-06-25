@@ -13,16 +13,16 @@ const scrollToNext = () => {
 export default function Firstsec() {
   return (
     <>
-    <section className="relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-80px">
+    <section className="panel relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-80px">
       <h1
-        className="google-sans text-[#f04c3e] m-0 mb-[20px]"
-        style={{
-          fontSize: "clamp(46px, 13vw, 228px)",
-          lineHeight: 1.1,
-          fontWeight: 600,
-          marginBottom: "31px",
-          letterSpacing: "-0.04em",
-        }}
+        className="text-[#f04c3e]
+            font-semibold
+            leading-[1.1]
+            mt-[0]
+            mb-[31px]
+           text-[42px] sm:text-[60px] md:text-[80px] lg:text-[120px] xl:text-[228px]
+          "
+           style={{ letterSpacing: "-0.04em" }}
       >
         Web <br />
         Engineering

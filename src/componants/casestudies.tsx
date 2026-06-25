@@ -22,7 +22,8 @@ const handlePause = () => {
   
 
   return (
-    <section className="w-full h-screen flex flex-col xl:flex-row">
+    
+    <section className="w-full panel desktop:min-h-screen flex flex-col xl:flex-row">
        
   <div className="reveal-up md:hidden bg-white px-5 sm:px-6 py-16">
     <span className="block font-bold text-[#f04c3e] text-[23px] leading-tight">

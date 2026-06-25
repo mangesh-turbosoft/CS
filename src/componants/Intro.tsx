@@ -19,7 +19,7 @@ export default function Intro() {
 
   return (
     <>
-      <section id="next">
+      <section id="next" className="panel desktop:min-h-screen">
         <div className="w-full fade">          
           <Image
             src="/images/cskills-map-tablet-new.png"

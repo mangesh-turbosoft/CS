@@ -37,7 +37,7 @@ export default function DesignAgencies() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(designAgencySchema) }}
       />
-      <section className="panel reveal-section min-h-screen relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
+      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
         <h1
           className="text-[#f04c3e]
             font-semibold
@@ -71,7 +71,7 @@ leading-[1.2]
 
       <section
         id="next"
-        className="panel reveal-section min-h-screen md:min-h-screen flex flex-col xl:flex-row"
+        className="panel reveal-section desktop:min-h-screen md:min-h-screen flex flex-col xl:flex-row"
       >
         <div className="w-full xl:w-1/2 bg-[#f04c3e] flex items-center">
           <div className="w-full px-4 sm:px-6 md:px-8 lg:px-[50px] py-12 md:py-16 lg:py-[80px]">
@@ -125,7 +125,7 @@ leading-[1.2]
         </div>
       </section>
 
-      <section className="panel reveal-section min-h-screen bg-[#3f3f3f] flex items-center">
+      <section className="panel reveal-section desktop:min-h-screen bg-[#3f3f3f] flex items-center">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] w-full py-12 md:py-16 lg:py-[180px]">
           <h2
             className="fade text-white font-semibold"
