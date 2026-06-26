@@ -26,10 +26,10 @@ const handlePause = () => {
     <section className="w-full panel desktop:min-h-screen flex flex-col xl:flex-row">
        
   <div className="reveal-up md:hidden bg-white px-5 sm:px-6 py-16">
-    <span className="block font-bold text-[#f04c3e] text-[23px] leading-tight">
+    <span className="block font-bold text-[#f04c3e] text-[32px] leading-tight">
       White-label Development
     </span>
-    <p className="text-[#7b7b7b] text-[18px] leading-relaxed mt-[4px]" style={{ lineHeight: "1.2" }}>
+    <p className="text-[#7b7b7b] text-[26px] leading-relaxed mt-[4px]" style={{ lineHeight: "1.2" }}>
       Design agencies often face challenges scaling development
                 capacity while maintaining quality and timelines. Our
                 white-label web development service enables your team to stay
