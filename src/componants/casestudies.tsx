@@ -26,10 +26,10 @@ const handlePause = () => {
     <section className="w-full panel desktop:min-h-screen flex flex-col xl:flex-row">
        
   <div className="reveal-up md:hidden bg-white px-5 sm:px-6 py-16">
-    <span className="block font-bold text-[#f04c3e] text-[32px] leading-tight">
+    <span className="block font-bold text-[#f04c3e] text-[23px] sm:text-[32px] leading-tight">
       White-label Development
     </span>
-    <p className="text-[#7b7b7b] text-[26px] leading-relaxed mt-[4px]" style={{ lineHeight: "1.2" }}>
+    <p className="text-[#7b7b7b] text-[20px] sm:text-[26px] leading-relaxed mt-[4px]" style={{ lineHeight: "1.2" }}>
       Design agencies often face challenges scaling development
                 capacity while maintaining quality and timelines. Our
                 white-label web development service enables your team to stay
@@ -91,12 +91,12 @@ const handlePause = () => {
           <div className="hidden md:flex w-full md:w-1/2 bg-white items-center px-5 sm:px-6 lg:px-[35px] py-6 md:py-[16px]">
             <div className="reveal-up">
               <span
-                className="block font-bold text-[#f04c3e] text-[23px] sm:text-[23px] lg:text-[23px] leading-tight"
+                className="block font-bold text-[#f04c3e] text-[23px] sm:text-[32px] lg:text-[32px] leading-tight"
               >
                 White-label Development
               </span>
               <p
-                className="text-[#7b7b7b] text-[18px] lg:text-[18px] xl:text-[20px] leading-relaxed mt-[4px]"
+                className="text-[#7b7b7b] text-[20px] lg:text-[20px] xl:text-[24px] leading-relaxed mt-[4px]"
                 style={{ lineHeight: "1.2" }}
               >
                 Design agencies often face challenges scaling development
