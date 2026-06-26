@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -12,49 +11,57 @@ import { serviceSchema } from "@/componants/schema";
 
 export const metadata: Metadata = serviceData;
 
-
 export default function Services() {
   return (
     <>
-    <FullPageScroll />
-    <ServicesAnimation />
-     <Script
+      <FullPageScroll />
+      <ServicesAnimation />
+      <Script
         id="services-schema"
         type="application/ld+json"
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-80px">
-       <h1
-  className="text-[#f04c3e]
-    font-semibold
-    leading-[1.1]
-    mt-[0]
-    mb-[0]
-    text-[48px] sm:text-[72px] md:text-[100px] lg:text-[clamp(140px,10vw,228px)]
-  "
-  style={{ letterSpacing: "-0.01em" }}
->
-  Development Partner
-</h1>
+      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
+        <h1
+          className="text-[#f04c3e]
+          font-semibold
+          leading-[1.1]
+          mt-[0]
+          mb-[0]   
+        "
+          style={{
+            fontSize:
+              "clamp(42px, calc(42px + (228 - 42) * ((100vw - 320px) / (1600 - 320))), 228px)",
+            letterSpacing: "-0.01em",
+          }}
+        >
+          Development Partner
+        </h1>
 
-<p
-  className="google-sans
-    text-[#7b7b7b]
-    font-medium
-    max-w-full
-    clear-both
-    mt-8
-    text-[24px] sm:text-[34px] md:text-[42px] lg:text-[52px] xl:text-[62px]
-    leading-[1.2]
-  "
->
-  Helping agencies scale website delivery without stretching internal teams.
-</p>
+        <p
+          className="google-sans
+          text-[#7b7b7b]
+          font-medium
+          max-w-full
+          clear-both
+          mt-4
+          sm:mt-5
+          lg:mt-8  
+          leading-[1.2]
+        "
+          style={{
+            fontSize:
+              "clamp(26px, calc(26px + (62 - 26) * ((100vw - 320px) / (1600 - 320))), 62px)",
+          }}
+        >
+          Helping agencies scale website delivery without stretching internal
+          teams.
+        </p>
 
         <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
-  <ScrollArrow />
-</div>
+          <ScrollArrow />
+        </div>
       </section>
 
       <section
@@ -84,7 +91,7 @@ export default function Services() {
             </h2>
 
             <p
-              className="text-white mb-10"
+              className="text-white mb-6 sm:mb-10"
               style={{
                 fontSize: "clamp(22px,2.2vw,32px)",
                 lineHeight: "normal",
@@ -97,7 +104,7 @@ export default function Services() {
             </p>
 
             <p
-              className="text-white mb-10"
+              className="text-white mb-6 sm:mb-10"
               style={{
                 fontSize: "clamp(22px,2.2vw,32px)",
                 lineHeight: "normal",
@@ -112,7 +119,7 @@ export default function Services() {
               href="mailto:hello@creativeskills.com"
               className="text-white"
               style={{
-               fontSize: "clamp(22px,2.2vw,32px)",
+                fontSize: "clamp(22px,2.2vw,32px)",
                 lineHeight: "normal",
               }}
             >
@@ -147,9 +154,9 @@ export default function Services() {
             </h2>
 
             <p
-              className="mb-10"
+              className="mb-6 sm:mb-10"
               style={{
-                fontSize: "clamp(18px,2vw,30px)",
+                fontSize: "clamp(21px,2vw,30px)",
                 lineHeight: "normal",
               }}
             >
@@ -163,7 +170,7 @@ export default function Services() {
 
             <p
               style={{
-                fontSize: "clamp(18px,2vw,30px)",
+                fontSize: "clamp(21px,2vw,30px)",
                 lineHeight: "normal",
               }}
             >
@@ -198,9 +205,9 @@ export default function Services() {
             </h2>
 
             <p
-              className="mb-10"
+              className="mb-6 sm:mb-10"
               style={{
-                fontSize: "clamp(18px,2vw,30px)",
+                fontSize: "clamp(21px,2vw,30px)",
                 lineHeight: "normal",
               }}
             >
@@ -214,7 +221,7 @@ export default function Services() {
 
             <p
               style={{
-                fontSize: "clamp(18px,2vw,30px)",
+                fontSize: "clamp(21px,2vw,30px)",
                 lineHeight: "normal",
               }}
             >
@@ -226,9 +233,9 @@ export default function Services() {
           </div>
         </div>
       </section>
-     <section className="panel">
-         <Footer />
-       </section>
+      <section className="panel">
+        <Footer />
+      </section>
     </>
   );
 }

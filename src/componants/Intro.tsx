@@ -20,13 +20,13 @@ export default function Intro() {
   return (
     <>
       <section id="next" className="panel desktop:min-h-screen">
-        <div className="w-full fade">          
+        <div className="w-full fade desktop:h-[50vh]">          
           <Image
             src="/images/cskills-map-tablet-new.png"
             alt="Creative Skills World Map"
             width={768}
             height={400}
-            className="w-full h-auto block xl:hidden"
+            className="w-full h-full object-cover block desktop:hidden"
             priority
           />
           
@@ -35,53 +35,61 @@ export default function Intro() {
             alt="Creative Skills World Map"
             width={1920}
             height={500}
-            className="w-full h-auto hidden xl:block"
+            className="w-full h-full object-cover hidden desktop:block"
             priority
           />
         </div>
 
         <div
-          className="relative w-full bg-cover bg-center bg-no-repeat h-[70vw] md:h-[350px] lg:h-[476px]"
-          style={{ backgroundImage: "url('/images/video-cover.png')" }}
+          className="relative w-full  bg-cover
+    bg-center
+    bg-no-repeat
+    h-[300px]
+    sm:min-h-[50vh]
+    desktop:h-[50vh] bg-[url('/images/video-cover-mobile.png')]
+    sm:bg-[url('/images/video-cover.png')]"
         >
-          <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 allign-middle h-full flex">
+          <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 min-h-[50vh] desktop:h-[50vh] flex items-center">
             <button
-              onClick={() => setIsOpen(true)}
-              className="reveal-up
-      absolute top-1/2 !-translate-y-1/2
-       max-md:top-auto max-md:bottom-14 max-md:!translate-y-0
-      left-4 sm:left-6 md:left-10 lg:left-[50px]
+  onClick={() => setIsOpen(true)}
+  className="
+    reveal-up
+    absolute
+    top-1/2
+    -translate-y-1/2
 
-      bg-[#f04c3e]
-      text-white
-      border-none
-      cursor-pointer
+    left-4 sm:left-6 md:left-10 lg:left-[50px]
 
-      text-[14px]
-      sm:text-[16px]
-      md:text-[18px]
-      lg:text-[22px]
+    bg-[#f04c3e]
+    text-white
+    border-none
+    cursor-pointer
 
-      leading-[22px]
-      sm:leading-[26px]
-      md:leading-[30px]
-      lg:leading-[34px]
+    text-[14px]
+    sm:text-[16px]
+    md:text-[18px]
+    lg:text-[22px]
 
-      px-4
-      sm:px-6
-      md:px-8
-      lg:px-[50px]
+    leading-[22px]
+    sm:leading-[26px]
+    md:leading-[30px]
+    lg:leading-[34px]
 
-      py-2
-      sm:py-3
+    px-4
+    sm:px-6
+    md:px-8
+    lg:px-[50px]
 
-      whitespace-normal
-      sm:whitespace-nowrap
+    py-2
+    sm:py-3
 
-      max-w-[90%]
-      sm:max-w-fit
-    "
-            >
+    whitespace-normal
+    sm:whitespace-nowrap
+
+    max-w-[90%]
+    sm:max-w-fit
+  "
+>
               <strong>Click here</strong> to view our workplace video
             </button>
           </div>

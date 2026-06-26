@@ -37,15 +37,19 @@ export default function DesignAgencies() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(designAgencySchema) }}
       />
-      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
+      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
         <h1
           className="text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
             mb-[0]
-           text-[48px] sm:text-[72px] md:text-[100px] lg:text-[clamp(150px,10vw,228px)]
           "
+          style={{
+            letterSpacing: "-0.036em",
+            fontSize:
+              "clamp(42px, calc(42px + (228 - 42) * ((100vw - 320px) / (1600 - 320))), 228px)",
+          }}
         >
           Design Agencies
         </h1>
@@ -55,10 +59,15 @@ export default function DesignAgencies() {
             font-medium
             max-w-full
             clear-both
-            mt-8
-           text-[24px] sm:text-[34px] md:text-[42px] lg:text-[52px] xl:text-[62px]
-leading-[1.2]
+            mt-4
+            sm:mt-5
+            lg:mt-8      
+            leading-[1.2]
           "
+          style={{
+            fontSize:
+              "clamp(26px, calc(26px + (62 - 26) * ((100vw - 320px) / (1600 - 320))), 62px)",
+          }}
         >
           You win the client with strategy and design.
           <br />
@@ -96,15 +105,17 @@ leading-[1.2]
                 {challenges.map((item, index) => (
                   <div
                     key={index}
-                    className="slide-right relative flex items-start mb-[50px]"
+                    className="slide-right relative flex items-start mb-[20px] sm:mb-[30px] lg:mb-[50px]"
                   >
                     <div className="w-[26px] h-[26px] rounded-full border-[4px] border-[#ff8b80] bg-[#f04c3e] z-10 flex-shrink-0" />
                     <p
-                      className="text-white ml-[20px]
-                      text-[20px] leading-[30px]
-                      md:text-[24px] md:leading-[30px]
-                      min-[1025px]:text-[24px] min-[1025px]:leading-[34px]
-                      min-[1201px]:text-[28px] min-[1201px]:leading-[37px]"
+                      className="text-white ml-[20px]"
+                      style={{
+                        fontSize:
+                          "clamp(20px, calc(20px + (24 - 20) * ((100vw - 320px) / (1600 - 320))), 24px)",
+                        lineHeight:
+                          "clamp(30px, calc(30px + (34 - 30) * ((100vw - 320px) / (1600 - 320))), 34px)",
+                      }}
                     >
                       {item}
                     </p>
@@ -126,13 +137,14 @@ leading-[1.2]
       </section>
 
       <section className="panel reveal-section desktop:min-h-screen bg-[#3f3f3f] flex items-center">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] w-full py-12 md:py-16 lg:py-[180px]">
+        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 lg:px-[50px] w-full py-12 md:py-16 lg:py-[100px]">
           <h2
             className="fade text-white font-semibold"
             style={{
-              fontSize: "clamp(32px,4vw,54px)",
               lineHeight: "1.1",
               fontFamily: '"Google Sans Flex", sans-serif',
+              fontSize:
+                "clamp(20px, calc(24px + (54 - 24) * ((100vw - 320px) / (1600 - 320))), 54px)",
             }}
           >
             We act as a seamless extension of your team, delivering dependable

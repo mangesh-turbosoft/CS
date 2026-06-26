@@ -66,103 +66,114 @@ const steps = [
   },
 ];
 
-
 export default function Process() {
   return (
     <>
-    <FullPageScroll />
-    <ServicesAnimation />
+      <FullPageScroll />
+      <ServicesAnimation />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(processSchema),
         }}
       />
-      <div className="w-full">
-        <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[80px] desktop:min-h-screen desktop:pt-[80px] desktop:pb-[80px]">
-          <h1
-            className="
+
+      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
+        <h1
+          className="
             text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
-            mb-[0]
-           text-[48px] sm:text-[72px] md:text-[100px] lg:text-[150px] xl:text-[228px]
+            mb-[0]           
           "
-          >
-            Process
-          </h1>
+          style={{
+            fontSize:
+              "clamp(42px, calc(42px + (228 - 42) * ((100vw - 320px) / (1600 - 320))), 228px)",
+          }}
+        >
+          Process
+        </h1>
 
-          <p
-            className="google-sans
+        <p
+          className="google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
             clear-both
-            mt-8
-           text-[24px] sm:text-[34px] md:text-[42px] lg:text-[52px] xl:text-[62px]
-leading-[1.2]
+            mt-4
+            sm:mt-5
+            lg:mt-8   
+            leading-[1.2]
           "
+          style={{
+            fontSize:
+              "clamp(26px, calc(26px + (62 - 26) * ((100vw - 320px) / (1600 - 320))), 62px)",
+          }}
+        >
+          Every project is unique, and we approach each with creativity,
+          technical discipline, and a strong focus on delivery.
+        </p>
+
+        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
+          <ScrollArrow />
+        </div>
+      </section>
+
+      {steps.map((step, i) => (
+        <section
+          id="next"
+          key={i}
+          className="panel reveal-section relative flex items-center border-t border-[#ebebeb] bg-white py-[20px] desktop:min-h-screen desktop:py-0"
+        >
+          <div
+            className={`w-full flex flex-col ${
+              step.imgLeft ? "md:flex-row" : "md:flex-row-reverse"
+            } items-center`}
           >
-            Every project is unique, and we approach each with creativity,
-            technical discipline, and a strong focus on delivery.
-          </p>
+            <div className="w-full md:w-[50%] flex items-center justify-center py-10 md:py-16 px-4 sm:px-6 md:px-8 md:px-[5vw]">
+              <Image
+                src={step.img}
+                alt={step.title}
+                width={800}
+                height={600}
+                className="image-revel w-[75%] md:w-full md:max-w-[720px] h-auto object-contain select-none"
+                draggable={false}
+              />
+            </div>
 
-          <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
-            <ScrollArrow/>
-          </div>
-        </section>
+            <div className="reveal-up w-full md:w-[50%] px-4 sm:px-6 md:px-8 xl:px-[6vw] py-10 pt-0 md:pt-10 md:py-16 xl:py-0">
+              <h2
+                className="font-semibold text-[#e8412a] leading-[1] mb-2 sm:mb-6"
+                style={{
+                  fontSize:
+                    "clamp(32px, calc(32px + (48 - 32) * ((100vw - 320px) / (1600 - 320))), 48px)",
+                }}
+              >
+                {step.title}
+              </h2>
 
-        {steps.map((step, i) => (
-          <section
-            id="next"
-            key={i}
-            className="panel reveal-section relative flex items-center border-t border-[#ebebeb] bg-white py-[20px] desktop:min-h-screen desktop:py-0"
-          >
-            <div
-              className={`w-full flex flex-col ${
-                step.imgLeft ? "md:flex-row" : "md:flex-row-reverse"
-              } items-center`}
-            >
-              <div className="w-full md:w-[50%] flex items-center justify-center py-10 md:py-16 px-4 sm:px-6 md:px-8 md:px-[5vw]">
-                <Image
-                  src={step.img}
-                  alt={step.title}
-                  width={800}
-                  height={600}
-                  className="image-revel w-[75%] md:w-full md:max-w-[720px] h-auto object-contain select-none"
-                  draggable={false}
-                />
-              </div>
-
-              <div className="w-full md:w-[50%] px-4 sm:px-6 md:px-8 xl:px-[6vw] py-10 pt-0 md:pt-10 md:py-16 xl:py-0">
-                <h2
-                  className="reveal-up font-semibold text-[#e8412a] leading-[1] mb-6"
-                  style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
-                >
-                  {step.title}
-                </h2>
-
-                <div className="reveal-up flex flex-col gap-5">
-                  {step.body.map((para, j) => (
-                    <p
-                      key={j}
-                      className="text-[#000] leading-[1.4]"
-                      style={{
-                        fontSize: "clamp(16px, 2vw, 26px)",
-                      }}
-                      dangerouslySetInnerHTML={{ __html: para }}
-                    />
-                  ))}
-                </div>
+              <div className="flex flex-col gap-5">
+                {step.body.map((para, j) => (
+                  <p
+                    key={j}
+                    className="text-[#000] leading-[1.4]"
+                    style={{
+                      fontSize:
+                        "clamp(22px, calc(22px + (26 - 22) * ((100vw - 320px) / (1600 - 320))), 26px)",
+                      lineHeight: "1.3",
+                    }}
+                    dangerouslySetInnerHTML={{ __html: para }}
+                  />
+                ))}
               </div>
             </div>
-          </section>
-        ))}
-        <section className="panel">
-          <Footer />
+          </div>
         </section>
-      </div>
+      ))}
+      <section className="panel">
+        <Footer />
+      </section>
     </>
   );
 }
