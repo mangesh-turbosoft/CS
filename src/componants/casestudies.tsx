@@ -91,13 +91,13 @@ const handlePause = () => {
           <div className="hidden md:flex w-full md:w-1/2 bg-white items-center px-5 sm:px-6 lg:px-[35px] py-6 md:py-[16px]">
             <div className="reveal-up">
               <span
-                className="block font-bold text-[#f04c3e] text-[23px] sm:text-[32px] lg:text-[32px] leading-tight"
+                className="block font-bold text-[#f04c3e] leading-tight" style={{ fontSize: "clamp(20px, calc(20px + (26 - 20) * ((100vw - 320px) / (1600 - 320))), 26px)",}}
               >
                 White-label Development
               </span>
               <p
-                className="text-[#7b7b7b] text-[20px] lg:text-[20px] xl:text-[24px] leading-relaxed mt-[4px]"
-                style={{ lineHeight: "1.2" }}
+                className="text-[#7b7b7b] leading-relaxed mt-[4px]"
+                style={{ lineHeight: "1.2", fontSize: "clamp(20px, calc(20px + (26 - 20) * ((100vw - 320px) / (1600 - 320))), 26px)", }}
               >
                 Design agencies often face challenges scaling development
                 capacity while maintaining quality and timelines. Our
