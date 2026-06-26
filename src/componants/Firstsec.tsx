@@ -24,7 +24,7 @@ export default function Firstsec() {
               "clamp(42px, calc(42px + (228 - 42) * ((100vw - 320px) / (1600 - 320))), 228px)",
           }}
         >
-          Web <br />
+        Home  Web <br />
           Engineering
         </h1>
 
