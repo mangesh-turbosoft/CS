@@ -24,8 +24,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(layoutSchema),
           }}
-        />
-        {/* <Loader /> */}
+        />        
         <ClientLayout>
           <Header />
           <ServicesAnimation />

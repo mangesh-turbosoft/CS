@@ -8,19 +8,19 @@ export default function Intro() {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = ''
     }
     return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
+      document.body.style.overflow = ''
+    }
+  }, [isOpen])
 
   return (
     <>
       <section id="next" className="panel desktop:min-h-screen">
-        <div className="w-full fade desktop:h-[50vh]">
+        <div className="w-full fade desktop:h-[50vh]">          
           <Image
             src="/images/cskills-map-tablet-new.png"
             alt="Creative Skills World Map"
@@ -29,7 +29,7 @@ export default function Intro() {
             className="w-full h-full object-cover block desktop:hidden"
             priority
           />
-
+          
           <Image
             src="/images/cskills-map-new.png"
             alt="Creative Skills World Map"
@@ -51,8 +51,8 @@ export default function Intro() {
         >
           <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 min-h-[50vh] desktop:h-[50vh] flex items-center">
             <button
-              onClick={() => setIsOpen(true)}
-              className="
+  onClick={() => setIsOpen(true)}
+  className="
     reveal-up
     absolute
     top-1/2
@@ -89,7 +89,7 @@ export default function Intro() {
     max-w-[90%]
     sm:max-w-fit
   "
-            >
+>
               <strong>Click here</strong> to view our workplace video
             </button>
           </div>
@@ -97,42 +97,39 @@ export default function Intro() {
       </section>
 
       {isOpen && (
-      <div
-  className="fixed inset-0 z-[9999] bg-black/85 flex items-center justify-center p-4 sm:p-6 md:p-10"
-  onClick={() => setIsOpen(false)}
->
-  <div
-    className="relative w-full max-w-[95vw] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[900px]"
-    onClick={(e) => e.stopPropagation()}
-  >
-    <button
-      onClick={() => setIsOpen(false)}
-      className="absolute -top-8 sm:-top-10 right-0 bg-transparent border-none cursor-pointer"
-    >
-      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-        <path
-          d="M18 6L6 18M6 6l12 12"
-          stroke="white"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-      </svg>
-    </button>
+        <div
+          className="fixed inset-0 z-[9999] bg-black/85 flex items-center justify-center px-4"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-[1200px]"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute -top-10 right-0 bg-transparent border-none cursor-pointer"
+            >
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M18 6L6 18M6 6l12 12"
+                  stroke="white"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </button>
 
-    <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-      <video
-        className="absolute inset-0 w-full h-full block rounded-none"
-        controls
-        autoPlay
-        loop
-        preload="metadata"
-        playsInline
-      >
-        <source src="/video/new-office.mp4" type="video/mp4" />
-      </video>
-    </div>
-  </div>
-</div>
+            <video
+              className="w-full h-auto block rounded-none"
+              controls
+              autoPlay
+              loop
+            >
+              <source src="/video/new-office.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+        
       )}
     </>
   );
