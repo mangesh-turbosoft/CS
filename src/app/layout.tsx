@@ -4,7 +4,6 @@ import Script from "next/script";
 import Header from "../componants/Header";
 import ClientLayout from "../componants/ClientLayout";
 import ServicesAnimation from "../componants/ServicesAnimation";
-// import Loader from "../componants/Loader";
 import { layoutData } from "../componants/meta";
 import { layoutSchema } from "../componants/schema";
 

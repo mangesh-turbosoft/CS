@@ -140,6 +140,7 @@ export default function Header() {
                 <Link
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
+                  prefetch={false}
                   className={`group flex items-center no-underline text-[32px] tracking-wide transition-all duration-300
             ${isActive ? "text-white" : "text-[#b2b2b2] font-light hover:text-white"}
           `}
