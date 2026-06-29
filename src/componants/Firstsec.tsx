@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
+import gsap from "gsap";
 import ScrollArrow from "./ScrollArrow";
 
 const scrollToNext = () => {
@@ -8,6 +10,26 @@ const scrollToNext = () => {
 };
 
 export default function Firstsec() {
+  useEffect(() => {
+    const tl = gsap.timeline();
+
+    tl.from(".hero-title", {
+      opacity: 0,
+      y: 60,
+      duration: 1,
+      ease: "power3.out",
+    }).from(
+      ".hero-subtitle",
+      {
+        opacity: 0,
+        y: 30,
+        duration: 0.8,
+        ease: "power3.out",
+      },
+      "-=0.5" // Starts before the title animation completely finishes
+    );
+  }, []);
+
   return (
     <>
       <section className="panel relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
