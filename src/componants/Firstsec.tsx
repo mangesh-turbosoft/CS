@@ -15,16 +15,14 @@ export default function Firstsec() {
 
     tl.from(".hero-title", {
       opacity: 0,
-      y: 60,
-      duration: 1,
-      ease: "power3.out",
+    y: -40,
+    duration: 1,
     }).from(
       ".hero-subtitle",
       {
         opacity: 0,
-        y: 30,
-        duration: 0.8,
-        ease: "power3.out",
+    y: -40,
+    duration: 1,
       },
       "-=0.5" // Starts before the title animation completely finishes
     );
