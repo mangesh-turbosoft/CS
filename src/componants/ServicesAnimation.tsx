@@ -46,11 +46,13 @@ export default function ServicesAnimation() {
             trigger: el,
             start: "top 95%",
             once: true,
+            invalidateOnRefresh: true,
           },
         }
       );
     });
-
+setTimeout(() => ScrollTrigger.refresh(), 500);
+    
     // Left Slide
     gsap.utils.toArray(".slide-left").forEach((el: any) => {
       gsap.fromTo(el,
