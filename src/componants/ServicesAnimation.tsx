@@ -18,78 +18,109 @@ export default function ServicesAnimation() {
         .from(heroSubtitle, { opacity: 0, y: -40, duration: 1 }, "-=0.5");
     }
 
+    const createAnimation = (selector: string, vars: gsap.TweenVars) => {
+      gsap.utils.toArray(selector).forEach((el: any) => {
+        gsap.set(el, { opacity: 1, x: 0, y: 0, scale: 1 });
+        
+        gsap.from(el, {
+          ...vars,
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            once: true,
+            onEnter: () => gsap.to(el, { ...vars, opacity: 1, x: 0, y: 0, scale: 1 }),
+          },
+        });
+      });
+    };
+
     // Fade Only
     gsap.utils.toArray(".fade").forEach((el: any) => {
-      gsap.from(el, {
-        opacity: 0,
-        duration: 1.2,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 95%",
-          once: true,
-        },
-      });
+      gsap.fromTo(el,
+        { opacity: 0 },
+        {
+          opacity: 1,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            once: true,
+          },
+        }
+      );
     });
 
     // Left Slide
     gsap.utils.toArray(".slide-left").forEach((el: any) => {
-      gsap.from(el, {
-        x: -80,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 95%",
-          once: true,
-        },
-      });
+      gsap.fromTo(el,
+        { x: -80, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            once: true,
+          },
+        }
+      );
     });
 
     // Right Slide
     gsap.utils.toArray(".slide-right").forEach((el: any) => {
-      gsap.from(el, {
-        x: 80,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 95%",
-          once: true,
-        },
-      });
+      gsap.fromTo(el,
+        { x: 80, opacity: 0 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            once: true,
+          },
+        }
+      );
     });
 
-    // Text Animation
+    // Reveal Up
     gsap.utils.toArray(".reveal-up").forEach((el: any) => {
-      gsap.from(el, {
-        y: 60,
-        opacity: 0,
-        duration: 1,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 95%",
-          once: true,
-        },
-      });
+      gsap.fromTo(el,
+        { y: 60, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            once: true,
+          },
+        }
+      );
     });
 
-    // Image Animation
+    // Image Reveal
     gsap.utils.toArray(".image-reveal").forEach((el: any) => {
-      gsap.from(el, {
-        scale: 1.1,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: el,
-          start: "top 95%",
-          once: true,
-        },
-      });
+      gsap.fromTo(el,
+        { scale: 1.1, opacity: 0 },
+        {
+          scale: 1,
+          opacity: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            once: true,
+          },
+        }
+      );
     });
 
     setTimeout(() => {
