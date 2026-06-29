@@ -81,7 +81,7 @@ export default function FullPageScroll() {
 
         tolerance: 30,
 
-        preventDefault: true,
+        preventDefault: false,
 
       });
 
