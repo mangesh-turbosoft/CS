@@ -100,7 +100,7 @@ export default function Process() {
                 alt={step.title}
                 width={800}
                 height={600}
-                className="image-revel w-[75%] md:w-full md:max-w-[720px] h-auto object-contain select-none"
+                className="fade w-[75%] md:w-full md:max-w-[720px] h-auto object-contain select-none"
                 draggable={false}
               />
             </div>
