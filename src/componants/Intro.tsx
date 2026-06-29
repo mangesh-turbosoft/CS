@@ -97,41 +97,42 @@ export default function Intro() {
       </section>
 
       {isOpen && (
-        <div
-          className="fixed inset-0 z-[9999] bg-black/85 flex items-center justify-center px-4"
-          onClick={() => setIsOpen(false)}
-        >
-          <div
-            className="relative w-full max-w-[1200px] my-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute -top-10 right-0 bg-transparent border-none cursor-pointer"
-            >
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M18 6L6 18M6 6l12 12"
-                  stroke="white"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
-          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-            <video
-              className="w-full h-auto block rounded-none"
-              controls
-              autoPlay
-              loop
-              preload="metadata"
-              playsInline
-            >
-              <source src="/video/new-office.mp4" type="video/mp4" />
-            </video>
-            </div>
-          </div>
-        </div>
+      <div
+  className="fixed inset-0 z-[9999] bg-black/85 flex items-center justify-center p-4 sm:p-6 md:p-10"
+  onClick={() => setIsOpen(false)}
+>
+  <div
+    className="relative w-full max-w-[95vw] sm:max-w-[80vw] md:max-w-[70vw] lg:max-w-[900px]"
+    onClick={(e) => e.stopPropagation()}
+  >
+    <button
+      onClick={() => setIsOpen(false)}
+      className="absolute -top-8 sm:-top-10 right-0 bg-transparent border-none cursor-pointer"
+    >
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M18 6L6 18M6 6l12 12"
+          stroke="white"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+        />
+      </svg>
+    </button>
+
+    <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+      <video
+        className="absolute inset-0 w-full h-full block rounded-none"
+        controls
+        autoPlay
+        loop
+        preload="metadata"
+        playsInline
+      >
+        <source src="/video/new-office.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</div>
       )}
     </>
   );
