@@ -27,7 +27,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 95%",
-          toggleActions: "play none none none",
+          once: true,
         },
       });
     });
@@ -42,7 +42,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 95%",
-          toggleActions: "play none none none",
+          once: true,
         },
       });
     });
@@ -57,7 +57,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 95%",
-          toggleActions: "play none none none",
+          once: true,
         },
       });
     });
@@ -72,7 +72,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 95%",
-          toggleActions: "play none none none",
+          once: true,
         },
       });
     });
@@ -87,7 +87,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 95%",
-          toggleActions: "play none none none",
+          once: true,
         },
       });
     });
