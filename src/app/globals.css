@@ -111,7 +111,12 @@ html, body {
     padding: 0 25px;
     clear: both;
   }
-/* globals.css */
+
+  .hero-title,
+.hero-subtitle {
+  opacity: 0;
+}
+
 .hero-title {
   animation: heroFadeIn 1s ease forwards;
 }
