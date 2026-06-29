@@ -104,7 +104,7 @@ useEffect(() => {
 
       <nav
         className="fixed top-0 right-0 h-full w-[380px] bg-[#1a1a1a] z-[999] flex flex-col py-8 px-10 transition-transform duration-300 ease-in-out"
-        style={{ transform: menuOpen ? "translateX(0)" : "translateX(100%)" }}
+        style={{ transform: menuOpen ? "translateX(0)" : "translateX(100%)" , visibility: menuOpen ? "visible" : "hidden" }}
       >
         <div className="flex justify-end mb-10">
           <button
