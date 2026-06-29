@@ -44,7 +44,7 @@ export default function Contact() {
       <div className="w-full font-sans">
         <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
           <h1
-            className="text-[#f04c3e]
+            className="hero-title text-[#f04c3e]
             font-semibold
             leading-[1.1]
             mt-[0]
@@ -60,7 +60,7 @@ export default function Contact() {
           </h1>
 
           <p
-            className="google-sans
+            className="hero-subtitle google-sans
             text-[#7b7b7b]
             font-medium
             max-w-full
