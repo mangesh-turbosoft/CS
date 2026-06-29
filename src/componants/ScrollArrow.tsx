@@ -10,7 +10,6 @@ export default function ScrollArrow() {
       }}
       className="
         hidden desktop:block
-        absolute
         bottom-[0px]
         left-1/2
         -translate-x-1/2
@@ -26,6 +25,7 @@ export default function ScrollArrow() {
         alt="Scroll Down"
         width={30}
         height={30}
+        style={{ pointerEvents: "none" }}
       />
     </div>
   );

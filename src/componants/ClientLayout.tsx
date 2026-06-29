@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Loader from "./Loader";
 
 export default function ClientLayout({
   children,
@@ -27,8 +26,7 @@ export default function ClientLayout({
 
   return (
     <>
-      {loading && <Loader />}
-      {children}
+       {children}
     </>
   );
 }

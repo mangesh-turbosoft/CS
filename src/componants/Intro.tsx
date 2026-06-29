@@ -124,6 +124,8 @@ export default function Intro() {
               controls
               autoPlay
               loop
+               preload="none"
+               playsInline
             >
               <source src="/video/new-office.mp4" type="video/mp4" />
             </video>
