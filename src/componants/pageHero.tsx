@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import gsap from "gsap";
+import React from "react";
 import ScrollArrow from "./ScrollArrow";
 
 interface Props {
@@ -9,18 +8,7 @@ interface Props {
   subtitle: string;
 }
 
-export default function PageHero({ title, subtitle }: Props) {
-  useEffect(() => {
-    const heroTitle = document.querySelector(".hero-title");
-    const heroSubtitle = document.querySelector(".hero-subtitle");
-
-    if (heroTitle && heroSubtitle) {
-      gsap.timeline()
-        .from(heroTitle, { opacity: 0, y: -40, duration: 1 })
-        .from(heroSubtitle, { opacity: 0, y: -40, duration: 1 }, "-=0.5");
-    }
-  }, []);
-
+export default function PageHero({ title, subtitle }: Props) {  
   return (
     <section className="panel relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
       <h1
