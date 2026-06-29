@@ -34,7 +34,7 @@ export default function Firstsec() {
             lg:mt-8
             leading-[1.2]
             "
-            style={{
+          style={{
             fontSize:
               "clamp(26px, calc(26px + (62 - 26) * ((100vw - 320px) / (1600 - 320))), 62px)",
           }}

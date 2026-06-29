@@ -6,20 +6,17 @@ import { Observer } from "gsap/Observer";
 
 export default function FullPageScroll() {
   useEffect(() => {
-
     gsap.registerPlugin(Observer);
 
     const mm = gsap.matchMedia();
 
     mm.add("(min-width: 1200px)", () => {
-
       const sections = document.querySelectorAll(".panel");
 
       if (!sections.length) return;
 
       let current = 0;
       let animating = false;
-
 
       const getCurrentSection = () => {
         let activeIndex = 0;
@@ -38,9 +35,7 @@ export default function FullPageScroll() {
         return activeIndex;
       };
 
-
       const goToSection = (index: number) => {
-
         if (animating || index < 0 || index >= sections.length) return;
 
         animating = true;
@@ -57,12 +52,9 @@ export default function FullPageScroll() {
         }, 900);
       };
 
-
       current = getCurrentSection();
 
-
       const observer = Observer.create({
-
         target: window,
 
         type: "wheel,touch",
@@ -82,34 +74,24 @@ export default function FullPageScroll() {
         tolerance: 30,
 
         preventDefault: true,
-
       });
-
 
       return () => {
         observer.kill();
       };
-
     });
-
 
     // below 1200px normal browser scroll
     mm.add("(max-width: 1199px)", () => {
-
       Observer.getAll().forEach((observer) => {
         observer.kill();
       });
-
     });
-
 
     return () => {
       mm.revert();
     };
-
-
   }, []);
-
 
   return null;
 }

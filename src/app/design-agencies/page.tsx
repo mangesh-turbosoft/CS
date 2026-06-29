@@ -37,13 +37,13 @@ export default function DesignAgencies() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(designAgencySchema) }}
       />
-      <PageHero 
-                      title="Design Agencies"
-                      subtitle="{<>You win the client with strategy and design.
+      <PageHero
+        title="Design Agencies"
+        subtitle="You win the client with strategy and design.
           <br />
-          We ensure the build matches your vision, pixel for pixel.</>}"
-                    />
-    
+          We ensure the build matches your vision, pixel for pixel."
+      />
+
       <section
         id="next"
         className="panel reveal-section desktop:min-h-screen md:min-h-screen flex flex-col xl:flex-row"

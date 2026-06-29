@@ -13,15 +13,19 @@ export default function Home() {
       <FullPageScroll />
       <ServicesAnimation />
       <PageHero
-        title={<>Web <br /> Engineering</>}
+        title={
+          <>
+            Web <br /> Engineering
+          </>
+        }
         subtitle="Premium websites in Headless, HubSpot and WordPress."
       />
       <Intro />
-    <CaseStudies />
+      <CaseStudies />
 
-  <section className="panel">
-    <Footer />
-  </section>
-</>
+      <section className="panel">
+        <Footer />
+      </section>
+    </>
   );
 }

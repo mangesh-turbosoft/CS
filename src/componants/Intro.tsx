@@ -8,19 +8,19 @@ export default function Intro() {
 
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ''
+      document.body.style.overflow = "";
     }
     return () => {
-      document.body.style.overflow = ''
-    }
-  }, [isOpen])
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <>
       <section id="next" className="panel desktop:min-h-screen">
-        <div className="w-full fade desktop:h-[50vh]">          
+        <div className="w-full fade desktop:h-[50vh]">
           <Image
             src="/images/cskills-map-tablet-new.png"
             alt="Creative Skills World Map"
@@ -29,7 +29,7 @@ export default function Intro() {
             className="w-full h-full object-cover block desktop:hidden"
             priority
           />
-          
+
           <Image
             src="/images/cskills-map-new.png"
             alt="Creative Skills World Map"
@@ -51,8 +51,8 @@ export default function Intro() {
         >
           <div className="relative max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 min-h-[50vh] desktop:h-[50vh] flex items-center">
             <button
-  onClick={() => setIsOpen(true)}
-  className="
+              onClick={() => setIsOpen(true)}
+              className="
     reveal-up
     absolute
     top-1/2
@@ -89,7 +89,7 @@ export default function Intro() {
     max-w-[90%]
     sm:max-w-fit
   "
->
+            >
               <strong>Click here</strong> to view our workplace video
             </button>
           </div>
@@ -124,14 +124,13 @@ export default function Intro() {
               controls
               autoPlay
               loop
-               preload="none"
-               playsInline
+              preload="none"
+              playsInline
             >
               <source src="/video/new-office.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
-        
       )}
     </>
   );
