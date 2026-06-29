@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 
-/* Google Sans Flex - 36pt */
 @font-face {
   font-family: 'Google Sans Flex';
   src: url('/fonts/GoogleSansFlex36pt-Regular.woff2') format('woff2'),
@@ -149,37 +148,6 @@ html, body {
 footer a:hover {
   opacity: 0.8;
 }
-
-/* .logo-loader {
-  width: min(320px, 80vw);
-  height: auto;
-  animation: logoReveal 1.8s ease-in-out forwards;
-}
-
-@keyframes logoReveal {
-  0% {
-    opacity: 0;
-    transform: scale(0.75) translateY(20px);
-    filter: blur(8px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(1.05) translateY(0);
-    filter: blur(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-    filter: blur(0);
-  }
-} */
-
-/* @keyframes lol {
-  0%   { opacity: 0; transform: translateX(-500px); }
-  50%  { opacity: 1; transform: translateX(0px); }
-  100% { opacity: 0; transform: translateX(500px); }
-} */
-
 
 
 @keyframes float {
