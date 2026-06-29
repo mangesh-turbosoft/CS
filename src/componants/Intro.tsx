@@ -118,7 +118,7 @@ export default function Intro() {
                 />
               </svg>
             </button>
-
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
             <video
               className="w-full h-auto block rounded-none"
               controls
@@ -129,6 +129,7 @@ export default function Intro() {
             >
               <source src="/video/new-office.mp4" type="video/mp4" />
             </video>
+            </div>
           </div>
         </div>
       )}
