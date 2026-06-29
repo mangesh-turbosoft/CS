@@ -8,23 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function ServicesAnimation() {
   useEffect(() => {
-
-  const tl = gsap.timeline();
-
-  tl.from(".hero-title", {
-    opacity: 0,
-    y: -40,
-    duration: 1,
-  }).from(
-    ".hero-subtitle",
-    {
-      opacity: 0,
-      y: -40,
-      duration: 1,
-    },
-    "-=0.5"
-  );
-
     // Fade Only
     gsap.utils.toArray(".fade").forEach((el: any) => {
       gsap.from(el, {
@@ -34,7 +17,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          once: true,
+          toggleActions: "play none none none",
         },
       });
     });
@@ -49,7 +32,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          once: true,
+          toggleActions: "play none none none",
         },
       });
     });
@@ -64,7 +47,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          once: true,
+          toggleActions: "play none none none",
         },
       });
     });
@@ -79,7 +62,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          once: true,
+          toggleActions: "play none none none",
         },
       });
     });
@@ -94,7 +77,7 @@ export default function ServicesAnimation() {
         scrollTrigger: {
           trigger: el,
           start: "top 85%",
-          once: true,
+          toggleActions: "play none none none",
         },
       });
     });
