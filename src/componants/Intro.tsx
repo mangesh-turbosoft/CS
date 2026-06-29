@@ -102,7 +102,7 @@ export default function Intro() {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="relative w-full max-w-[1200px]"
+            className="relative w-full max-w-[1200px] my-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
