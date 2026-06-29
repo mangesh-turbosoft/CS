@@ -26,7 +26,7 @@ export default function ServicesAnimation() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
       });
@@ -41,7 +41,7 @@ export default function ServicesAnimation() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
       });
@@ -56,7 +56,7 @@ export default function ServicesAnimation() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
       });
@@ -71,7 +71,7 @@ export default function ServicesAnimation() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
       });
@@ -86,15 +86,15 @@ export default function ServicesAnimation() {
         ease: "power3.out",
         scrollTrigger: {
           trigger: el,
-          start: "top 85%",
+          start: "top 95%",
           toggleActions: "play none none none",
         },
       });
     });
 
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       ScrollTrigger.refresh();
-    });
+    }, 300);
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

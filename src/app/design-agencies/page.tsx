@@ -40,7 +40,6 @@ export default function DesignAgencies() {
       <PageHero
         title="Design Agencies"
         subtitle="You win the client with strategy and design.
-          <br />
           We ensure the build matches your vision, pixel for pixel."
       />
 
