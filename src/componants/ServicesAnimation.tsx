@@ -9,7 +9,23 @@ gsap.registerPlugin(ScrollTrigger);
 export default function ServicesAnimation() {
   useEffect(() => {
 
-      // Fade Only
+  const tl = gsap.timeline();
+
+  tl.from(".hero-title", {
+    opacity: 0,
+    y: -40,
+    duration: 1,
+  }).from(
+    ".hero-subtitle",
+    {
+      opacity: 0,
+      y: -40,
+      duration: 1,
+    },
+    "-=0.5"
+  );
+
+    // Fade Only
     gsap.utils.toArray(".fade").forEach((el: any) => {
       gsap.from(el, {
         opacity: 0,
