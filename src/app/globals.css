@@ -98,7 +98,7 @@ html, body {
   .google-sans {
     font-family: 'Google Sans Flex', sans-serif;
   }
-
+}
   @layer components {
   .figtree {
     font-family: 'Figtree', sans-serif;
@@ -110,6 +110,24 @@ html, body {
     margin: 0 auto;
     padding: 0 25px;
     clear: both;
+  }
+/* globals.css */
+.hero-title {
+  animation: heroFadeIn 1s ease forwards;
+}
+
+.hero-subtitle {
+  animation: heroFadeIn 1s ease 0.5s forwards;
+}
+
+@keyframes heroFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
