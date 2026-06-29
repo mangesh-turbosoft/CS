@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
 import ServicesAnimation from "../../componants/ServicesAnimation";
-import ScrollArrow from "@/componants/ScrollArrow";
 import Footer from "@/componants/Footer";
 import FullPageScroll from "@/componants/FullPageScroll";
+import PageHero from "@/componants/pageHero";
 import { serviceData } from "@/componants/meta";
 import { serviceSchema } from "@/componants/schema";
 
@@ -22,6 +22,11 @@ export default function Services() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
+<PageHero 
+                title="Development Partner"
+                subtitle="Helping agencies scale website delivery without stretching internal
+          teams."
+              />
 
 
       <section

@@ -2,8 +2,8 @@ import Footer from "@/componants/Footer";
 import FullPageScroll from "@/componants/FullPageScroll";
 import { designAgencyData } from "@/componants/meta";
 import { designAgencySchema } from "@/componants/schema";
-import ScrollArrow from "@/componants/ScrollArrow";
 import ServicesAnimation from "@/componants/ServicesAnimation";
+import PageHero from "@/componants/pageHero";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Script from "next/script";
@@ -37,47 +37,13 @@ export default function DesignAgencies() {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(designAgencySchema) }}
       />
-      <section className="panel reveal-section relative max-w-[1600px] mx-auto flex flex-col justify-center bg-white px-4 sm:px-6 md:px-8 lg:px-[50px] pt-[120px] pb-[60px] sm:pb-[80px] desktop:min-h-screen desktop:pt-[80px]">
-        <h1
-          className="hero-title text-[#f04c3e]
-            font-semibold
-            leading-[1.1]
-            mt-[0]
-            mb-[0]
-          "
-          style={{
-            letterSpacing: "-0.036em",
-            fontSize:
-              "clamp(42px, calc(42px + (228 - 42) * ((100vw - 320px) / (1600 - 320))), 228px)",
-          }}
-        >
-          Design Agencies
-        </h1>
-        <p
-          className="hero-subtitle google-sans
-            text-[#7b7b7b]
-            font-medium
-            max-w-full
-            clear-both
-            mt-4
-            sm:mt-5
-            lg:mt-8      
-            leading-[1.2]
-          "
-          style={{
-            fontSize:
-              "clamp(26px, calc(26px + (62 - 26) * ((100vw - 320px) / (1600 - 320))), 62px)",
-          }}
-        >
-          You win the client with strategy and design.
+      <PageHero 
+                      title="Design Agencies"
+                      subtitle="{<>You win the client with strategy and design.
           <br />
-          We ensure the build matches your vision, pixel for pixel.
-        </p>
-        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2">
-          <ScrollArrow />
-        </div>
-      </section>
-
+          We ensure the build matches your vision, pixel for pixel.</>}"
+                    />
+    
       <section
         id="next"
         className="panel reveal-section desktop:min-h-screen md:min-h-screen flex flex-col xl:flex-row"
